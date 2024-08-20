@@ -9,6 +9,7 @@ document.getElementById("menu-button").addEventListener("click", function () {
   menuCloseIcon.classList.toggle("hidden", isMenuOpen);
 });
 
+//technology section data
 const team = [
   {
     avatar: "https://solutionwise.in/assets/images/image01.jpg?v=1b7a2d9c",
@@ -36,6 +37,7 @@ const team = [
   },
 ];
 
+//work section data
 const work = [
   {
     avatar: "https://solutionwise.in/assets/images/image07.png?v=1b7a2d9c",
@@ -69,13 +71,14 @@ const work = [
   },
 ];
 
+//function to convert the lists to html
 function generateTeamMemberHTML(member) {
   return `
         <li>
-            <div class="w-full h-60 sm:h-52 md:h-56">
+            <div class="w-full h-58 sm:h-52 md:h-56">
                 <img
                     src="${member.avatar}"
-                    class="w-full h-full object-cover object-center shadow-md rounded-xl"
+                    class="w-15 h-full object-cover object-center shadow-md rounded-xl"
                     alt="${member.name}"
                 />
             </div>
@@ -99,6 +102,7 @@ work.forEach((member) => {
   workList.innerHTML += generateTeamMemberHTML(member);
 });
 
+//features section data
 document.addEventListener("DOMContentLoaded", function () {
   const features = [
     {
